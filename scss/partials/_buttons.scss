@@ -1,0 +1,31 @@
+.button {
+	@extend %medium;
+	display: inline-block;
+	height: 38px;
+	padding: 0 20px;
+	background: #fff;
+	border: none;
+	font-size: 1.1rem;
+	line-height: 1rem;
+	color: #e25a86;
+	transition: .3s;
+	transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+
+	&:hover {
+		background: $color-primary;
+		color: #fff;
+	}
+
+	&__val {
+		display: block;
+		@include vertical-align;
+	}
+
+	[class^="icon-"] {
+		&:last-child {
+			margin-right: -7px;
+
+		}
+	}
+
+}

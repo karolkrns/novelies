@@ -1,0 +1,39 @@
+
+// Micro Clearfix, use this instead of clearing and/or adding additional HTML elements.
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+// MediaQueris
+$mdAll: 768px;
+$md: 1279px;
+$s: 767px;
+
+@mixin mdAll {
+    @media (min-width: #{$mdAll}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: #{$md}) {
+        @content;
+    }
+}
+
+@mixin s {
+    @media (max-width: #{$s}) {
+        @content;
+    }
+}

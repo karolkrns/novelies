@@ -1,0 +1,133 @@
+.slider {
+
+	&__item {
+		position: relative;
+		max-width: 1200px;
+		width: 100%;
+		height: 527px;
+		margin: 0 auto;
+		box-sizing: border-box;
+		z-index: 1;
+
+		@include s {
+			height: auto;
+		}
+
+		&:hover {
+			.button {
+				background: $color-primary;
+				color: #fff;
+			}
+		}
+
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		z-index: -1;
+
+		@include s {
+			position: relative;
+			height: 290px;
+		}
+
+	}
+
+	&__caption {
+		position: absolute;
+		bottom: 32px;
+		left: 30px;
+		max-width: 360px;
+		padding: 30px 35px;
+		background: #e8e8e8;
+		border-bottom: 2px solid #e87fa1;
+		color: #797979;
+
+		@include s {
+			position: relative;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			max-width: none;
+			padding-top: 20px;
+			padding-bottom: 0;
+			border-bottom: none;
+			text-align: center;
+		}
+
+		.button {
+			position: absolute;
+			left: 15px;
+			bottom: -13px;
+			margin-bottom: -7px;
+
+			@include s {
+				position: static;
+				background: $color-primary;
+				color: #fff;
+			}
+
+		}
+
+	}
+
+	&__title {
+		@extend %regular;
+		margin: 0;
+		font-size: 1.9rem;
+		line-height: 2.3rem;
+		text-transform: uppercase;
+	}
+
+	&__desc {
+		font-size: .9rem;
+	}
+
+
+}
+
+//news
+.news {
+	position: relative;
+	width: 100%;
+	margin-bottom: 30px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	@include s {
+		margin-bottom: 15px;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: $color-primary;
+		opacity: 0;
+		transition: .3s;
+	}
+
+	&:hover {
+		&:after {
+			opacity: 1;
+		}
+	}
+
+	img {
+		display: block;
+	}
+
+}
