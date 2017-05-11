@@ -1,0 +1,92 @@
+.product {
+	position: relative;
+	height: 345px;
+	border: 1px solid #dcdcdc;
+	box-sizing: border-box;
+	overflow: hidden;
+	@include s {
+		&:after {
+			display: none!important;
+		}
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: $color-primary;
+		transform: scale(0,1);
+		transition: .3s;
+	}
+
+	&:hover {
+		&:after {
+			transform: scale(1);
+		}
+		.product__caption {
+			transform: translateY(-2px);
+		}
+		.product__name {
+			color: #e25a86;
+		}
+	}
+
+	&__thumb {
+		height: 285px;
+		text-align: center;
+
+		img {
+			display: inline-block;
+			max-height: 245px;
+			@include vertical-align;
+		}
+	} 
+
+	&__caption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 10px 30px;
+		background: #fff;
+		font-size: 1rem;
+		color: #3b3b3b;
+		transform: translateY(35px);
+		transition: .3s;
+		@include s {
+			transform: translateY(1px)!important;
+		}
+	}
+
+	&__name {
+		@extend %light; 
+		margin: 0;
+		padding: 10px 0;
+		font-size: 1rem;
+		text-transform: uppercase;
+		transition: .3s .1s;
+	}
+
+	&__price {
+		@extend %light;
+		padding-right: 115px;
+		margin-top: 10px;
+		strong {
+			@extend %regular; 
+		}
+	}
+
+	&__details {
+		.button {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: 34px;
+		}
+	}
+
+}

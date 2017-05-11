@@ -34,6 +34,9 @@ p {
 	text-transform: uppercase;
 	font-size: 1.15rem;
 	color: $color-primary;
+	@include s {
+		padding: 20px 0;
+	}
 	[class^="icon-"] {
 		margin-right: 5px;
 		font-size: 1.1rem;

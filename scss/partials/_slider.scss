@@ -15,3 +15,39 @@
 		border-color: #f4adc4;
 	}
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+	top: 0;
+	right: -50px;
+	width: 40px;
+	height: calc(100% - 77.5px);
+	margin-top: 0;
+	background: none;
+	font-size: 2.2rem;
+	color: $color-primary;
+	transition: .3s;
+	@include s {
+		top: auto;
+		bottom: 21px;
+		right: 0;
+		height: 40px;
+	}
+
+	&.swiper-button-disabled {
+		color: #8a8a8a;
+		opacity: 1;
+	}
+
+	[class^="icon-"] {
+	    display: block;
+	    @include vertical-align;
+	}
+}
+
+.swiper-button-prev {
+	left: -50px;
+	@include s {
+		left: 0;
+	}
+}
