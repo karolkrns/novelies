@@ -1,0 +1,165 @@
+.footer {
+	position: relative;
+	max-width: 1200px;
+	width: 100%;
+	margin: 60px auto;
+	padding: 40px 0px;
+	background: #e8e8e8;
+	color: #797979;
+
+	@include s {
+		width: 100%;
+		margin: 15px 0 0;
+		padding: 20px 0;
+		text-align: center;
+	}
+
+	.container {
+		padding: 0 20px;
+	}
+
+	&__menu {
+		display: inline-block;
+		max-width: 700px;
+		padding: 5px 55px 5px 0;
+		vertical-align: top;
+		@include splitBorder;
+		&:after {
+			display: none;
+		}
+		@include s {
+			position: relative;
+			display: block;
+			padding: 0 0 15px 0;
+			margin-bottom: 5px;
+			&:after {
+				display: block;
+			}
+		}
+
+		&-item {
+			display: inline-block;
+			margin-left: 13px;
+			@include s {
+				display: block;
+				margin-left: 0;
+			}
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			a {
+				color: #797979;
+				transition: .3s;
+				@include s {
+					display: block;
+					padding: 8px 0;
+				}
+
+				&:hover {
+					color: $color-primary;
+				}
+			}
+		}
+	}
+
+	&__contact {
+		display: inline-block;
+		padding: 5px 0 5px 25px;
+		border-left: 1px solid #c6c6c6;
+		vertical-align: top;
+		@include splitBorder;
+		&:after {
+			display: none;
+		}
+		@include s {
+			padding: 7px 0 12px 0;
+			border-left: none;
+			text-align: center;
+			&:after {
+				display: block;
+			}
+
+		}
+	}
+
+	&__phone {
+		margin-bottom: 25px;
+
+		@include s {
+			margin-bottom: 15px;
+			padding-right: 30px;
+		}
+
+		[class^="icon-"] {
+		    font-size: 1.7rem;
+		    vertical-align: middle;
+
+		    + span {
+		    	display: inline-block;
+		    	vertical-align: middle;
+		    }
+		}
+
+		&-number {
+			@extend %light;
+			small {
+				font-size: 1.1rem;
+			}
+			strong {
+				@extend %light;
+				font-size: 1.7rem;
+			}
+		}
+	}
+
+	&__logo {
+		float: right;
+		width: 120px;
+		margin-top: 13px;
+		vertical-align: middle;
+		@include s {
+			display: inline-block;
+			float: none;
+			margin-bottom: 13px;
+		}
+	}
+
+	&__desc {
+		@extend %light;
+		position: absolute;
+		bottom: 45px;
+		left: 50px;
+		font-size: .9rem;
+		color: #797979;
+		@include s {
+			position: static;
+		}
+	}
+
+	&__copy {
+		@extend %light;
+		position: absolute;
+		top: 100%;
+		left: 50px;
+		padding: 20px 0;
+		font-size: .9rem;
+		color: #797979;
+		@include s {
+			position: static;
+			padding: 25px 0 15px;
+		}
+
+		a {
+			color: #797979;
+			transition: .3s;
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+
+	}
+
+}

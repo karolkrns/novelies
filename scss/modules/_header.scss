@@ -59,6 +59,10 @@
 
 	        .logo {
 	        	width: 165px;
+
+	        	@include s {
+	        		background: #fff;
+	        	}
 	        }
 	    }
 
@@ -89,10 +93,12 @@
 
 	.logo {
 		display: inline-block;
+		max-width: 100%;
 		font-size: 1rem;
 
 		img {
 			display: block;
+			max-width: 100%;
 		}
 
 	}
@@ -154,7 +160,7 @@
 			background: $color-primary;
 			vertical-align: middle;
 			font-size: .92em;
-			line-height: 21px;
+			line-height: 23px;
 			color: #fff;
 			transform: translateY(0);
 			transition: .3s;
@@ -176,6 +182,9 @@
 	}
 
 	.user {
+		@include s {
+			white-space: nowrap;
+		}
 		&__item {
 			display: inline-block;
 			margin-left: 25px;

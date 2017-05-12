@@ -7,6 +7,10 @@
 	background-repeat: no-repeat;
 	z-index: 1;
 
+	@include s {
+		height: 260px;
+	}
+
 	&:hover {
 		&:after {
 			opacity: .9;
@@ -45,6 +49,10 @@
 
 	&__val {
 		display: inline-block;
+
+		&:first-child {
+			margin-right: 10px;
+		}
 	}
 
 }

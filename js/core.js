@@ -141,6 +141,11 @@ $(document).ready(function() {
                         slidesPerView: 1
                     }
                 },
+                onInit: function(swiper) { 
+                    if(swiper.bullets.length == 1) {
+                        $this.find('.swiper-pagination-bullet').hide(); 
+                    } 
+                },
             });  
 
         });
